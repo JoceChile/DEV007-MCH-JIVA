@@ -1,0 +1,87 @@
+<div class="welcome">
+  <h1 style="font-size: 5px; color: #0e0e0e; text-align: center">
+    Welcome to {{ title }}
+  </h1>
+</div>
+
+<header class="top-bar">
+  <img src="../assets/Moviepedia.png" alt="logo" class="logo" />
+
+  <div>
+    <input
+      type="text"
+      [formControl]="searchTerm"
+      placeholder="Search in Moviepedia"
+      class="search-input"
+      (input)="onSearchInput()"
+    />
+  </div>
+
+  <div>
+    <button (click)="searchMovies()" class="search-button">Search</button>
+  </div>
+
+  <!-- <p>Search term: {{ searchTerm.value }}</p> -->
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="filterByGenre('all')">All Genres</button>
+    <button mat-menu-item [matMenuTriggerFor]="genreMenu">Genres</button>
+  </mat-menu>
+
+  <!-- <button mat-button [matMenuTriggerFor]="genreMenu" class="menu-button">
+    Menu
+  </button> -->
+  <mat-menu #genreMenu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let genre of genres"
+      (click)="filterByGenre(genre)"
+    >
+      {{ genre }}
+    </button>
+    <!-- <button mat-menu-item (click)="filterByGenre('Action')">Action</button> -->
+    <!-- <button mat-menu-item (click)="filterByYear()">Year</button> -->
+    <!-- Agrega más botones para otras opciones de filtro -->
+  </mat-menu>
+
+  <menu class="menu-circle">
+    <div class="circle-content">Menu</div>
+  </menu>
+</header>
+
+<div class="movie-results">
+  <div *ngIf="movies.length === 0">
+    <p>Not results</p>
+  </div>
+
+  <div *ngIf="movies.length > 0">
+    <h2>Search result:</h2>
+    <ul>
+      <li *ngFor="let movie of movies" (click)="selectMovie(movie)">
+        <div>
+          <h3>{{ movie.Title }} ({{ movie.Year }})</h3>
+          <img [src]="movie.Poster" alt="{{ movie.Title }} Poster" />
+        </div>
+      </li>
+    </ul>
+    <div *ngIf="selectedMovie">
+      <p>Selected Movie: {{ selectedMovie.Title }}</p>
+      <app-movie [movie]="selectedMovie"></app-movie>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="movies.length > 0">
+  <h2>Search result:</h2>
+  <div class="movie-posters">
+    <div
+      *ngFor="let movie of movies | slice : 0 : 5"
+      (click)="selectMovie(movie)"
+    >
+      <img [src]="movie.Poster" alt="{{ movie.Title }} Poster" />
+    </div>
+  </div>
+  <button mat-button *ngIf="movies.length > 5" (click)="loadNextPage()">
+    Next Page
+  </button>
+</div>

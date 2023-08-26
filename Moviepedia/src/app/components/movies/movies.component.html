@@ -1,0 +1,26 @@
+<!-- <p>movies works!</p> -->
+<div *ngIf="movie">
+  <h2>{{ movie.Title }}</h2>
+  <p>Year: {{ movie.Year }}</p>
+  <p>Director: {{ movie.Director }}</p>
+  <p>Writer: {{ movie.Writer }}</p>
+  <p>Plot: {{ movie.Plot }}</p>
+  <p>Actors: {{ movie.Actors }}</p>
+  <p>Genre: {{ movie.Genre }}</p>
+  <p>Language: {{ movie.Language }}</p>
+  <p>Country: {{ movie.Country }}</p>
+  <p>Type: {{ movie.Type }}</p>
+  <p>Rated: {{ movie.Rated }}</p>
+  <p>Released: {{ movie.Released }}</p>
+  <p>Runtime: {{ movie.Runtime }}</p>
+  <p>Awards: {{ movie.Awards }}</p>
+  <p>BoxOffice: {{ movie.BoxOffice }}</p>
+  <p>DVD: {{ movie.DVD }}</p>
+  <p>Metascore: {{ movie.Metascore }}</p>
+  <p>Production: {{ movie.Production }}</p>
+  <p>Response: {{ movie.Response }}</p>
+  <p>imdbID: {{ movie.imdbID }}</p>
+  <p>imdbRating: {{ movie.imdbRating }}</p>
+  <p>imdbVotes: {{ movie.imdbVotes }}</p>
+</div>
+<div *ngIf="!movie">Movie not rendered</div>

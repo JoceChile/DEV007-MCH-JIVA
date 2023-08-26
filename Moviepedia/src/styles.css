@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #0E0E0E;
+    color: #EFE71A;
+    background-image: url('./assets/rollo.png'), url('./assets/rollo.png');
+    background-repeat: repeat-y, repeat-y;
+    background-position: left, right;
+    background-size: 50px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
