@@ -1,26 +1,26 @@
 <!-- <p>movies works!</p> -->
-<div *ngIf="movie">
-  <h2>{{ movie.Title }}</h2>
-  <p>Year: {{ movie.Year }}</p>
-  <p>Director: {{ movie.Director }}</p>
-  <p>Writer: {{ movie.Writer }}</p>
-  <p>Plot: {{ movie.Plot }}</p>
-  <p>Actors: {{ movie.Actors }}</p>
-  <p>Genre: {{ movie.Genre }}</p>
-  <p>Language: {{ movie.Language }}</p>
-  <p>Country: {{ movie.Country }}</p>
-  <p>Type: {{ movie.Type }}</p>
-  <p>Rated: {{ movie.Rated }}</p>
-  <p>Released: {{ movie.Released }}</p>
-  <p>Runtime: {{ movie.Runtime }}</p>
-  <p>Awards: {{ movie.Awards }}</p>
-  <p>BoxOffice: {{ movie.BoxOffice }}</p>
-  <p>DVD: {{ movie.DVD }}</p>
-  <p>Metascore: {{ movie.Metascore }}</p>
-  <p>Production: {{ movie.Production }}</p>
-  <p>Response: {{ movie.Response }}</p>
-  <p>imdbID: {{ movie.imdbID }}</p>
-  <p>imdbRating: {{ movie.imdbRating }}</p>
-  <p>imdbVotes: {{ movie.imdbVotes }}</p>
-</div>
-<div *ngIf="!movie">Movie not rendered</div>
+<ul *ngIf="movie" ngClass="list-details">
+  <!-- <h2>{{ movie.Title }}</h2>
+  <p>Year: {{ movie.Year }}</p> -->
+  <li><strong>Director:</strong> {{ movie.Director }}</li>
+  <li><strong>Writer:</strong> {{ movie.Writer }}</li>
+  <li><strong>Plot:</strong> {{ movie.Plot }}</li>
+  <li><strong>Actors:</strong> {{ movie.Actors }}</li>
+  <li><strong>Genre:</strong> {{ movie.Genre }}</li>
+  <li><strong>Language:</strong> {{ movie.Language }}</li>
+  <li><strong>Country:</strong> {{ movie.Country }}</li>
+  <li><strong>Type:</strong> {{ movie.Type }}</li>
+  <li><strong>Rated:</strong> {{ movie.Rated }}</li>
+  <li><strong>Released:</strong> {{ movie.Released }}</li>
+  <li><strong>Runtime:</strong> {{ movie.Runtime }}</li>
+  <li><strong>Awards:</strong> {{ movie.Awards }}</li>
+  <li><strong>BoxOffice:</strong> {{ movie.BoxOffice }}</li>
+  <li><strong>DVD:</strong> {{ movie.DVD }}</li>
+  <li><strong>Metascore:</strong> {{ movie.Metascore }}</li>
+  <li><strong>Production:</strong> {{ movie.Production }}</li>
+  <li><strong>Response:</strong> {{ movie.Response }}</li>
+  <li><strong>imdbID:</strong> {{ movie.imdbID }}</li>
+  <li><strong>imdbRating:</strong> {{ movie.imdbRating }}</li>
+  <li><strong>imdbVotes:</strong> {{ movie.imdbVotes }}</li>
+</ul>
+<div *ngIf="!movie" ngClass="list-details">Movie not rendered</div>

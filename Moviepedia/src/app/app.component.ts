@@ -29,10 +29,11 @@ export class AppComponent {
 
   initGenres() {
     this.genres = [
-      'Adventure, Family, Fantasy',
       'Action',
       'Adventure',
       'Comedy',
+      'Family',
+      'Fantasy',
       'Romance',
     ];
   }
@@ -74,6 +75,10 @@ export class AppComponent {
       this.movies = []; //limpiar busqueda
     }
   }
+
+  performSearch() {
+    const searchText = this.searchTerm.value;
+  }
   searchMovies() {
     const searchTerm = this.searchTerm.value;
     // console.log('Search term:', searchTerm);
@@ -84,7 +89,7 @@ export class AppComponent {
           console.log('API response:', data);
           this.movies = [data];
           // this.movies = data.Search || [];
-          console.log('Number of movies:', this.movies.length);
+          // console.log('Number of movies:', this.movies.length);
         });
     }
   }
@@ -93,12 +98,12 @@ export class AppComponent {
     this.selectedMovie = movie;
   }
 
-  onSearch(event: any) {
-    const searchTerm = event.term;
-    this.omdbService.getMovieByTitle(searchTerm).subscribe((title) => {
-      this.movieTitles = title;
-    });
-  }
+  // onSearch(event: any) {
+  //   const searchTerm = event.term;
+  //   this.omdbService.getMovieByTitle(searchTerm).subscribe((title) => {
+  //     this.movieTitles = title;
+  //   });
+  // }
 
   openGenreMenu() {
     this.genreMenu.openMenu();

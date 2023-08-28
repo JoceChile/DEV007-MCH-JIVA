@@ -1,0 +1,9 @@
+.list-details {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.list-details li {
+    margin-bottom: 35px;
+}

@@ -5,78 +5,169 @@
 
 .top-bar {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between 10%;
+    justify-content: space-evenly;
     margin-top: 0;
+    margin-left: 55px;
+    margin-right: 55px;
 
 }
 
 .logo {
-    border-radius: 500px;
-    width: 135px;
-    height: 123px;
+    border-radius: 400px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
-
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
 
 }
 
 .search-input {
     border: 1px solid #EFE71A;
     background-color: #EFE71A;
-    padding: 25px;
     border-radius: 350px;
     width: 700px;
     color: #F41212;
     text-align: center;
-    font-family: Paprika;
-    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 380px;
     line-height: normal;
     display: grid;
     margin: auto;
 
 }
 
+input::placeholder {
+    color: black;
+}
+
 .search-button {
+    border: 1px solid #EFE71A;
     background-color: #EFE71A;
-    color: #F41212;
-    border: none;
-    padding: 5px 10px;
     border-radius: 75px;
     cursor: pointer;
     display: grid;
-    cursor: pointer;
+    color: black;
+    width: 90px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.menu-circle {
-    width: 123px;
-    height: 123px;
+.menu-button {
+    width: 100px;
+    height: 100px;
     background-color: #F41212;
     border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: black;
-    font-weight: bold;
-    margin-left: 10px;
     text-align: center;
-    font-family: Paprika;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px
 }
 
-.movie-results {
+.next-page {
+    border: 1px solid #EFE71A;
+    background-color: #EFE71A;
+    border-radius: 75px;
+    cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 0;
+    align-items: center;
+    color: black;
+    width: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.movie-container {
+    text-align: center;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.movie-item {
+    border: 5px solid #F41212;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 300px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.selected-movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+
+}
+
+
+
+/* RESPONSIVE MEDIA QUERY */
+
+/* DISPOSITIVO MOVIL IPHONE 14 Y SIMILARES */
+
+@media screen and (max-width: 414px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .menu-button {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+/* IPAD MINI */
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .menu-button {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
 }
