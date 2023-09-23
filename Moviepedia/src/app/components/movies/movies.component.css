@@ -2,8 +2,17 @@
     list-style-type: none;
     padding-left: 0;
     text-align: left;
+    letter-spacing: 2px;
 }
 
 .list-details li {
     margin-bottom: 35px;
+}
+
+li strong {
+    color: red;
+}
+
+li:not(:has(strong)) {
+    color: aliceblue;
 }

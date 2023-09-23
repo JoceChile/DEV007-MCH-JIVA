@@ -1,7 +1,5 @@
-<!-- <p>movies works!</p> -->
 <ul *ngIf="movie" ngClass="list-details">
-  <!-- <h2>{{ movie.Title }}</h2>
-  <p>Year: {{ movie.Year }}</p> -->
+  <li><strong>imdbRating:</strong> {{ movie.imdbRating }}</li>
   <li><strong>Director:</strong> {{ movie.Director }}</li>
   <li><strong>Writer:</strong> {{ movie.Writer }}</li>
   <li><strong>Plot:</strong> {{ movie.Plot }}</li>
@@ -20,7 +18,6 @@
   <li><strong>Production:</strong> {{ movie.Production }}</li>
   <li><strong>Response:</strong> {{ movie.Response }}</li>
   <li><strong>imdbID:</strong> {{ movie.imdbID }}</li>
-  <li><strong>imdbRating:</strong> {{ movie.imdbRating }}</li>
   <li><strong>imdbVotes:</strong> {{ movie.imdbVotes }}</li>
 </ul>
 <div *ngIf="!movie" ngClass="list-details">Movie not rendered</div>

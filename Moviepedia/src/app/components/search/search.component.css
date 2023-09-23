@@ -1,0 +1,86 @@
+.search-input {
+    border: 1px solid #FF3131;
+    background-color: #FF3131;
+    border-radius: 350px;
+    width: 380px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    line-height: normal;
+    display: flex;
+    margin-top: -110px;
+    margin-left: 250px;
+}
+
+input::placeholder {
+    color: black;
+    font-size: 20px;
+}
+
+.movie-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    margin-top: 90px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.movie-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 5px solid black;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h3,
+h4,
+img {
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 70%;
+    align-content: flex-start;
+}
+
+img {
+    width: 350px;
+    height: 500px;
+    border-radius: 5%;
+}
+
+.selected-movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    font-size: 20px;
+    border: 5px solid black;
+    padding: 15px;
+}
+
+.error-message {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-left: 380px;
+    padding-top: 30px;
+    width: 70%;
+}

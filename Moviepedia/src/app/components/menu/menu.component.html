@@ -1,0 +1,71 @@
+<button
+  ngClass="menu-button"
+  (click)="openGenreMenu()"
+  [matMenuTriggerFor]="menu"
+>
+  Menu
+</button>
+<div ngClass="menu-results-container">
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="genreMenu">Genres</button>
+    <button mat-menu-item [matMenuTriggerFor]="directorMenu">Director</button>
+    <button mat-menu-item [matMenuTriggerFor]="yearMenu">Year</button>
+  </mat-menu>
+
+  <mat-menu #genreMenu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let genre of genres"
+      (click)="selectedGenre = genre; loadMoviesByFilter()"
+    >
+      {{ genre }}
+    </button>
+  </mat-menu>
+
+  <mat-menu #directorMenu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let director of directors"
+      (click)="selectedDirector = director; loadMoviesByFilter()"
+    >
+      {{ director }}
+    </button>
+  </mat-menu>
+
+  <mat-menu #yearMenu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let year of years"
+      (click)="selectedYear = year; loadMoviesByFilter()"
+    >
+      {{ year }}
+    </button>
+  </mat-menu>
+</div>
+
+<app-details-movies></app-details-movies>
+
+<!-- MOVIE RESULTS NOT RESULT TITLE YEAR POSTER -->
+
+<div ngClass="box" *ngIf="movies.length > 0">
+  <div *ngFor="let movie of movies" (click)="selectMovie(movie)">
+    <div ngClass="card">
+      <h3>{{ movie.Title }} ({{ movie.Year }})</h3>
+      <img [src]="movie.Poster" alt="{{ movie.Title }} Poster" />
+    </div>
+
+    <div *ngIf="selectedMovie" ngClass="selected-movie-details">
+      <app-movie [movie]="selectedMovie"></app-movie>
+
+      <!-- BUTTON NEXT PAGE -->
+      <button
+        ngClass="next-page"
+        mat-button
+        *ngIf="movies.length > 6"
+        (click)="loadNextPage()"
+      >
+        Next Page
+      </button>
+    </div>
+  </div>
+</div>

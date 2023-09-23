@@ -1,0 +1,105 @@
+.menu-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #EFE71A;
+    background-color: #EFE71A;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 140px;
+    align-items: center;
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    position: fixed;
+}
+
+.next-page {
+    margin-left: 900px;
+    border: 1px solid #EFE71A;
+    background-color: #EFE71A;
+    border-radius: 75px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.movie-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.movie-item {
+    border: 5px solid #F41212;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 300px;
+    height: 600px;
+}
+
+img {
+    width: 200px;
+    height: 350px;
+}
+
+/* .movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+} */
+
+h3 {
+    font-size: 22px;
+    gap: 15px;
+
+}
+
+.box {
+    display: grid;
+    width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 160px;
+    margin-left: 300px;
+    text-align: center;
+}
+
+.card {
+    background-color: #EFE71A;
+    color: black;
+    border-radius: 45px;
+    padding: 15px;
+    width: 180px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 150px;
+    height: 220px;
+}
