@@ -39,11 +39,14 @@ export class MenuComponent {
       'Comedy',
       'Family',
       'Fantasy',
+      'Fiction',
       'Romance',
+      'Thriller',
+      'Manga',
     ];
   }
   initDirectors() {
-    this.directors = ['Sofia Copolla', 'Tarantino'];
+    this.directors = ['Copolla', 'Tarantino'];
   }
   initYears() {
     this.years = [2023, 2022, 2021, 2020];

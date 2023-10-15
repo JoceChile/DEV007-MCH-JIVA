@@ -1,11 +1,14 @@
 .logo {
-    border-radius: 400px;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
+}
+
+.topbar {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 80px;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    margin-left: 55px;
+
 }
